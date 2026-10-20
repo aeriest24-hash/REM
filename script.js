@@ -66,16 +66,14 @@
 
   const monthName = targetDate.toLocaleString(undefined, { month: "long" });
   const fullDate = `${monthName} ${WEDDING_CONFIG.date.day}, ${WEDDING_CONFIG.date.year}`;
-  const coupleTitle = `${WEDDING_CONFIG.couple[0]} & ${WEDDING_CONFIG.couple[1]} | Wedding Invitation`;
-  const invitationDescription = `Join ${WEDDING_CONFIG.couple[0]} and ${WEDDING_CONFIG.couple[1]} as they celebrate their wedding on ${fullDate}. Explore the invitation, wedding details, families, gallery, and RSVP.`;
+  const coupleTitle = `${WEDDING_CONFIG.couple} | Wedding Invitation`;
+  const invitationDescription = `Join ${WEDDING_CONFIG.couple} as they celebrate their wedding on ${fullDate}. Explore the invitation, wedding details, families, gallery, and RSVP.`;
   document.title = coupleTitle;
   document.querySelector('meta[property="og:title"]').content = coupleTitle;
   document.querySelector('meta[name="description"]').content = invitationDescription;
   document.querySelector('meta[property="og:description"]').content = invitationDescription;
-  document.querySelector("#groom-name").textContent = WEDDING_CONFIG.couple[0];
-  document.querySelector("#bride-name").textContent = WEDDING_CONFIG.couple[1];
-  document.querySelector("#closing-groom-name").textContent = WEDDING_CONFIG.couple[0];
-  document.querySelector("#closing-bride-name").textContent = WEDDING_CONFIG.couple[1];
+  document.querySelector("#couple-name").textContent = WEDDING_CONFIG.couple;
+  document.querySelector("#closing-couple-name").textContent = WEDDING_CONFIG.couple;
   document.querySelector("#hero-date").textContent = `${monthName} ${WEDDING_CONFIG.date.day} · ${WEDDING_CONFIG.date.year}`;
   document.querySelectorAll(".wedding-date").forEach((element) => { element.textContent = fullDate; });
   document.querySelector("#ceremony-venue").textContent = WEDDING_CONFIG.ceremony.venue;
