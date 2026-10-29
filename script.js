@@ -18,15 +18,39 @@
   });
 
   const weddingAudio = document.querySelector("#wedding-audio");
+  const musicToggle = document.querySelector("#music-toggle");
   weddingAudio.volume = 0.65;
 
-  function startWeddingMusic() {
-    weddingAudio.play().catch(() => {});
+  function updateMusicToggle() {
+    const isPlaying = !weddingAudio.paused;
+    musicToggle.textContent = isPlaying ? "♫ Music on" : "♫ Play music";
+    musicToggle.setAttribute("aria-label", isPlaying ? "Pause wedding music" : "Play wedding music");
+    musicToggle.setAttribute("aria-pressed", String(isPlaying));
   }
 
+  musicToggle.addEventListener("click", async () => {
+    if (!weddingAudio.paused) {
+      weddingAudio.pause();
+      return;
+    }
+
+    try {
+      await weddingAudio.play();
+    } catch (error) {
+      musicToggle.textContent = "♫ Music unavailable";
+      musicToggle.setAttribute("aria-label", "Wedding music could not be played");
+      console.error("Unable to play wedding music.", error);
+    }
+  });
+  weddingAudio.addEventListener("play", updateMusicToggle);
+  weddingAudio.addEventListener("pause", updateMusicToggle);
+  weddingAudio.addEventListener("error", () => {
+    musicToggle.textContent = "♫ Music unavailable";
+    musicToggle.setAttribute("aria-label", "Wedding music could not be loaded");
+    console.error("Unable to load wedding music.", weddingAudio.error);
+  });
   weddingAudio.play().catch(() => {
-    document.addEventListener("pointerdown", startWeddingMusic, { once: true });
-    document.addEventListener("keydown", startWeddingMusic, { once: true });
+    updateMusicToggle();
   });
 
   const targetDate = new Date(
