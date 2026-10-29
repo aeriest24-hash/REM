@@ -20,7 +20,7 @@ const WEDDING_CONFIG = {
     { title: "Cord", names: ["Kenneth Louine Arbasa", "Faith G. Jadulan"] },
     { title: "Candle", names: ["Pascual Nemenzo", "Evangeline Nemenzo"] },
     { title: "Godmothers", names: ["Ms. Ma. Daisy Brown", "Ms. Marjielyn Biraquit", "Ms. Ma. Teresa V. Querido", "Ms. Mary Ann Arbasa", "Ms. Niña Burke", "Ms. Madeline Terrado", "Ms. Marissa Quinagoran", "Ms. Erlinda Asis", "Ms. Maricar Ruelo", "Ms. Jacquelyn Timbal", "Ms. Ruby Arbasto"] },
-    { title: "Godfathers", names: ["Mr. Raymond Brown", "Mr. Virgillo Biraquit", "Mr. Aldrin Mangalindan", "Mr. Felicimo Arbasa Jr.", "Mr. Philip Burke", "Mr. Norberto Terrado", "Mr. Wilfredo Escorpizo", "Mr. Eugene Taracatac", "Mr. Chris De Villa", "Mr. Romeo Naig", "Mr. Fausto Alarcon Dolorso Jr."] },
+    { title: "Godfathers", names: ["Mr. Raymond Brown", "Mr. Virgillo Biraquit", "Mr. Aldrin Mangalindan", "Mr. Felicimo Arbasa Jr.", "Mr. Philip Burke", "Mr. Norberto Terrado", "Mr. Wilfredo Escorpizo", "Mr. Jonathan Sadia", "Mr. Chris De Villa", "Mr. Romeo Naig", "Mr. Fausto Alarcon Dolorso Jr."] },
     { title: "Best Man", names: ["Mark Joseph Borlaza"], featured: true },
     { title: "Groomsmen", names: ["Melvin P. Lirag", "Ermelito O. Lariestan Kenneth", "Alexander Robert Briaquit", "Aeriest Zefth B. Uaje", "Gerald Batuyong", "Isiah Desmond Brown"] },
     { title: "Maid of Honor", names: ["Margarett S. Miraflor"], featured: true },
